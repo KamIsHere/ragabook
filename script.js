@@ -1,4 +1,4 @@
-// add a cycle
+	// add a cycle
 function addCycle() {
   // get the reference for the parent tables
   var tables = document.getElementById('teenTaal');
@@ -26,9 +26,8 @@ function addCycle() {
   tbl.appendChild(tblBody);
   // appends <table> into parent table
   tables.appendChild(tbl);
-  // sets the border attribute of tbl to 2 and width to 1350px;
+  // sets the border attribute of tbl to 2
   tbl.setAttribute("border", "2");
-  tbl.setAttribute('width', '1350px');
 }
 
 //new cycle object constructor 
@@ -76,7 +75,7 @@ function addNode(note){
     sargam['cycle' + cycleNum] = new NewCycle();
     addCycle();
     //add note to that cycle 
-    sargam['cycle' + cycleNum].sum += note
+    addNode(note);
   }
 }
 
